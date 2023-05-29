@@ -1,0 +1,115 @@
+digraph G {
+	 5[label= ventana]
+	6[label= "="]
+	7[label= "CREARVENTANA"]
+	4[label= crearventana]
+	4->5
+	4->6
+	4->7
+	3[label= statement]
+	3->4
+	11[label= frame_inicio]
+	12[label= "="]
+	13[label= "CREARFRAME"]
+	16[label= ventana]
+	15[label= argument1]
+	15->16
+	19[label= pos]
+	18[label= argument1]
+	18->19
+	22[label= gray]
+	21[label= argument1]
+	21->22
+	20[label= argument_list1]
+	20->21
+	17[label= argument_list2]
+	17->18
+	17->20
+	14[label= argument_list2]
+	14->15
+	14->17
+	10[label= crearframe]
+	10->11
+	10->12
+	10->13
+	10->14
+	9[label= statement]
+	9->10
+	26[label= boton_inicio]
+	27[label= "="]
+	28[label= "CREARBOTON"]
+	31[label= frame_inicio]
+	30[label= argument1]
+	30->31
+	34[label= 'btnini']
+	33[label= argument2]
+	33->34
+	37[label= accion]
+	36[label= argument1]
+	36->37
+	40[label= pos]
+	39[label= argument1]
+	39->40
+	38[label= argument_list1]
+	38->39
+	35[label= argument_list2]
+	35->36
+	35->38
+	32[label= argument_list2]
+	32->33
+	32->35
+	29[label= argument_list2]
+	29->30
+	29->32
+	25[label= creaboton]
+	25->26
+	25->27
+	25->28
+	25->29
+	24[label= statement]
+	24->25
+	44[label= etiqueta_inicio]
+	45[label= "="]
+	46[label= "CREARETIQUETA"]
+	49[label= padre]
+	48[label= argument1]
+	48->49
+	52[label= texto]
+	51[label= argument1]
+	51->52
+	50[label= argument_list1]
+	50->51
+	47[label= argument_list2]
+	47->48
+	47->50
+	43[label= crearetiqueta]
+	43->44
+	43->45
+	43->46
+	43->47
+	42[label= statement]
+	42->43
+	56[label= ventana]
+	57[label= "INICIAR"]
+	55[label= Iniciar]
+	55->56
+	55->57
+	54[label= statement]
+	54->55
+	53[label= statement_list]
+	53->54
+	41[label= statement_list]
+	41->42
+	41->53
+	23[label= statement_list]
+	23->24
+	23->41
+	8[label= statement_list]
+	8->9
+	8->23
+	2[label= statement_list]
+	2->3
+	2->8
+	1[label= block]
+	1->2
+	}

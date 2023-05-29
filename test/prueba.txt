@@ -1,0 +1,5 @@
+ventana = Crearventana()°
+frame_inicio = Crearframe(ventana, pos, gray)°
+boton_inicio = Crearboton(frame_inicio,'btnini', accion, pos)°
+etiqueta_inicio = Crearetiqueta(padre, texto)°
+ventana.iniciar()°

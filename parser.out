@@ -1,0 +1,435 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    NUMBER
+
+Grammar
+
+Rule 0     S' -> block
+Rule 1     block -> statement_list
+Rule 2     statement_list -> statement statement_list
+Rule 3     statement_list -> statement
+Rule 4     statement -> crearventana FINL
+Rule 5     statement -> crearframe FINL
+Rule 6     statement -> crearboton FINL
+Rule 7     statement -> crearetiqueta FINL
+Rule 8     statement -> iniciar FINL
+Rule 9     crearventana -> ID ASIGNAR CREARVENTANA LPARENT RPARENT
+Rule 10    crearframe -> ID ASIGNAR CREARFRAME LPARENT argument_list RPARENT
+Rule 11    crearboton -> ID ASIGNAR CREARBOTON LPARENT argument_list RPARENT
+Rule 12    crearetiqueta -> ID ASIGNAR CREARETIQUETA LPARENT argument_list RPARENT
+Rule 13    iniciar -> ID DOT INICIAR LPARENT RPARENT
+Rule 14    argument_list -> argument
+Rule 15    argument_list -> argument COMA argument_list
+Rule 16    argument -> ID
+Rule 17    argument -> TEXT
+
+Terminals, with rules where they appear
+
+ASIGNAR              : 9 10 11 12
+COMA                 : 15
+CREARBOTON           : 11
+CREARETIQUETA        : 12
+CREARFRAME           : 10
+CREARVENTANA         : 9
+DOT                  : 13
+FINL                 : 4 5 6 7 8
+ID                   : 9 10 11 12 13 16
+INICIAR              : 13
+LPARENT              : 9 10 11 12 13
+NUMBER               : 
+RPARENT              : 9 10 11 12 13
+TEXT                 : 17
+error                : 
+
+Nonterminals, with rules where they appear
+
+argument             : 14 15
+argument_list        : 10 11 12 15
+block                : 0
+crearboton           : 6
+crearetiqueta        : 7
+crearframe           : 5
+crearventana         : 4
+iniciar              : 8
+statement            : 2 3
+statement_list       : 1 2
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . block
+    (1) block -> . statement_list
+    (2) statement_list -> . statement statement_list
+    (3) statement_list -> . statement
+    (4) statement -> . crearventana FINL
+    (5) statement -> . crearframe FINL
+    (6) statement -> . crearboton FINL
+    (7) statement -> . crearetiqueta FINL
+    (8) statement -> . iniciar FINL
+    (9) crearventana -> . ID ASIGNAR CREARVENTANA LPARENT RPARENT
+    (10) crearframe -> . ID ASIGNAR CREARFRAME LPARENT argument_list RPARENT
+    (11) crearboton -> . ID ASIGNAR CREARBOTON LPARENT argument_list RPARENT
+    (12) crearetiqueta -> . ID ASIGNAR CREARETIQUETA LPARENT argument_list RPARENT
+    (13) iniciar -> . ID DOT INICIAR LPARENT RPARENT
+
+    ID              shift and go to state 9
+
+    block                          shift and go to state 1
+    statement_list                 shift and go to state 2
+    statement                      shift and go to state 3
+    crearventana                   shift and go to state 4
+    crearframe                     shift and go to state 5
+    crearboton                     shift and go to state 6
+    crearetiqueta                  shift and go to state 7
+    iniciar                        shift and go to state 8
+
+state 1
+
+    (0) S' -> block .
+
+
+
+state 2
+
+    (1) block -> statement_list .
+
+    $end            reduce using rule 1 (block -> statement_list .)
+
+
+state 3
+
+    (2) statement_list -> statement . statement_list
+    (3) statement_list -> statement .
+    (2) statement_list -> . statement statement_list
+    (3) statement_list -> . statement
+    (4) statement -> . crearventana FINL
+    (5) statement -> . crearframe FINL
+    (6) statement -> . crearboton FINL
+    (7) statement -> . crearetiqueta FINL
+    (8) statement -> . iniciar FINL
+    (9) crearventana -> . ID ASIGNAR CREARVENTANA LPARENT RPARENT
+    (10) crearframe -> . ID ASIGNAR CREARFRAME LPARENT argument_list RPARENT
+    (11) crearboton -> . ID ASIGNAR CREARBOTON LPARENT argument_list RPARENT
+    (12) crearetiqueta -> . ID ASIGNAR CREARETIQUETA LPARENT argument_list RPARENT
+    (13) iniciar -> . ID DOT INICIAR LPARENT RPARENT
+
+    $end            reduce using rule 3 (statement_list -> statement .)
+    ID              shift and go to state 9
+
+    statement                      shift and go to state 3
+    statement_list                 shift and go to state 10
+    crearventana                   shift and go to state 4
+    crearframe                     shift and go to state 5
+    crearboton                     shift and go to state 6
+    crearetiqueta                  shift and go to state 7
+    iniciar                        shift and go to state 8
+
+state 4
+
+    (4) statement -> crearventana . FINL
+
+    FINL            shift and go to state 11
+
+
+state 5
+
+    (5) statement -> crearframe . FINL
+
+    FINL            shift and go to state 12
+
+
+state 6
+
+    (6) statement -> crearboton . FINL
+
+    FINL            shift and go to state 13
+
+
+state 7
+
+    (7) statement -> crearetiqueta . FINL
+
+    FINL            shift and go to state 14
+
+
+state 8
+
+    (8) statement -> iniciar . FINL
+
+    FINL            shift and go to state 15
+
+
+state 9
+
+    (9) crearventana -> ID . ASIGNAR CREARVENTANA LPARENT RPARENT
+    (10) crearframe -> ID . ASIGNAR CREARFRAME LPARENT argument_list RPARENT
+    (11) crearboton -> ID . ASIGNAR CREARBOTON LPARENT argument_list RPARENT
+    (12) crearetiqueta -> ID . ASIGNAR CREARETIQUETA LPARENT argument_list RPARENT
+    (13) iniciar -> ID . DOT INICIAR LPARENT RPARENT
+
+    ASIGNAR         shift and go to state 16
+    DOT             shift and go to state 17
+
+
+state 10
+
+    (2) statement_list -> statement statement_list .
+
+    $end            reduce using rule 2 (statement_list -> statement statement_list .)
+
+
+state 11
+
+    (4) statement -> crearventana FINL .
+
+    ID              reduce using rule 4 (statement -> crearventana FINL .)
+    $end            reduce using rule 4 (statement -> crearventana FINL .)
+
+
+state 12
+
+    (5) statement -> crearframe FINL .
+
+    ID              reduce using rule 5 (statement -> crearframe FINL .)
+    $end            reduce using rule 5 (statement -> crearframe FINL .)
+
+
+state 13
+
+    (6) statement -> crearboton FINL .
+
+    ID              reduce using rule 6 (statement -> crearboton FINL .)
+    $end            reduce using rule 6 (statement -> crearboton FINL .)
+
+
+state 14
+
+    (7) statement -> crearetiqueta FINL .
+
+    ID              reduce using rule 7 (statement -> crearetiqueta FINL .)
+    $end            reduce using rule 7 (statement -> crearetiqueta FINL .)
+
+
+state 15
+
+    (8) statement -> iniciar FINL .
+
+    ID              reduce using rule 8 (statement -> iniciar FINL .)
+    $end            reduce using rule 8 (statement -> iniciar FINL .)
+
+
+state 16
+
+    (9) crearventana -> ID ASIGNAR . CREARVENTANA LPARENT RPARENT
+    (10) crearframe -> ID ASIGNAR . CREARFRAME LPARENT argument_list RPARENT
+    (11) crearboton -> ID ASIGNAR . CREARBOTON LPARENT argument_list RPARENT
+    (12) crearetiqueta -> ID ASIGNAR . CREARETIQUETA LPARENT argument_list RPARENT
+
+    CREARVENTANA    shift and go to state 18
+    CREARFRAME      shift and go to state 19
+    CREARBOTON      shift and go to state 20
+    CREARETIQUETA   shift and go to state 21
+
+
+state 17
+
+    (13) iniciar -> ID DOT . INICIAR LPARENT RPARENT
+
+    INICIAR         shift and go to state 22
+
+
+state 18
+
+    (9) crearventana -> ID ASIGNAR CREARVENTANA . LPARENT RPARENT
+
+    LPARENT         shift and go to state 23
+
+
+state 19
+
+    (10) crearframe -> ID ASIGNAR CREARFRAME . LPARENT argument_list RPARENT
+
+    LPARENT         shift and go to state 24
+
+
+state 20
+
+    (11) crearboton -> ID ASIGNAR CREARBOTON . LPARENT argument_list RPARENT
+
+    LPARENT         shift and go to state 25
+
+
+state 21
+
+    (12) crearetiqueta -> ID ASIGNAR CREARETIQUETA . LPARENT argument_list RPARENT
+
+    LPARENT         shift and go to state 26
+
+
+state 22
+
+    (13) iniciar -> ID DOT INICIAR . LPARENT RPARENT
+
+    LPARENT         shift and go to state 27
+
+
+state 23
+
+    (9) crearventana -> ID ASIGNAR CREARVENTANA LPARENT . RPARENT
+
+    RPARENT         shift and go to state 28
+
+
+state 24
+
+    (10) crearframe -> ID ASIGNAR CREARFRAME LPARENT . argument_list RPARENT
+    (14) argument_list -> . argument
+    (15) argument_list -> . argument COMA argument_list
+    (16) argument -> . ID
+    (17) argument -> . TEXT
+
+    ID              shift and go to state 29
+    TEXT            shift and go to state 32
+
+    argument_list                  shift and go to state 30
+    argument                       shift and go to state 31
+
+state 25
+
+    (11) crearboton -> ID ASIGNAR CREARBOTON LPARENT . argument_list RPARENT
+    (14) argument_list -> . argument
+    (15) argument_list -> . argument COMA argument_list
+    (16) argument -> . ID
+    (17) argument -> . TEXT
+
+    ID              shift and go to state 29
+    TEXT            shift and go to state 32
+
+    argument_list                  shift and go to state 33
+    argument                       shift and go to state 31
+
+state 26
+
+    (12) crearetiqueta -> ID ASIGNAR CREARETIQUETA LPARENT . argument_list RPARENT
+    (14) argument_list -> . argument
+    (15) argument_list -> . argument COMA argument_list
+    (16) argument -> . ID
+    (17) argument -> . TEXT
+
+    ID              shift and go to state 29
+    TEXT            shift and go to state 32
+
+    argument_list                  shift and go to state 34
+    argument                       shift and go to state 31
+
+state 27
+
+    (13) iniciar -> ID DOT INICIAR LPARENT . RPARENT
+
+    RPARENT         shift and go to state 35
+
+
+state 28
+
+    (9) crearventana -> ID ASIGNAR CREARVENTANA LPARENT RPARENT .
+
+    FINL            reduce using rule 9 (crearventana -> ID ASIGNAR CREARVENTANA LPARENT RPARENT .)
+
+
+state 29
+
+    (16) argument -> ID .
+
+    COMA            reduce using rule 16 (argument -> ID .)
+    RPARENT         reduce using rule 16 (argument -> ID .)
+
+
+state 30
+
+    (10) crearframe -> ID ASIGNAR CREARFRAME LPARENT argument_list . RPARENT
+
+    RPARENT         shift and go to state 36
+
+
+state 31
+
+    (14) argument_list -> argument .
+    (15) argument_list -> argument . COMA argument_list
+
+    RPARENT         reduce using rule 14 (argument_list -> argument .)
+    COMA            shift and go to state 37
+
+
+state 32
+
+    (17) argument -> TEXT .
+
+    COMA            reduce using rule 17 (argument -> TEXT .)
+    RPARENT         reduce using rule 17 (argument -> TEXT .)
+
+
+state 33
+
+    (11) crearboton -> ID ASIGNAR CREARBOTON LPARENT argument_list . RPARENT
+
+    RPARENT         shift and go to state 38
+
+
+state 34
+
+    (12) crearetiqueta -> ID ASIGNAR CREARETIQUETA LPARENT argument_list . RPARENT
+
+    RPARENT         shift and go to state 39
+
+
+state 35
+
+    (13) iniciar -> ID DOT INICIAR LPARENT RPARENT .
+
+    FINL            reduce using rule 13 (iniciar -> ID DOT INICIAR LPARENT RPARENT .)
+
+
+state 36
+
+    (10) crearframe -> ID ASIGNAR CREARFRAME LPARENT argument_list RPARENT .
+
+    FINL            reduce using rule 10 (crearframe -> ID ASIGNAR CREARFRAME LPARENT argument_list RPARENT .)
+
+
+state 37
+
+    (15) argument_list -> argument COMA . argument_list
+    (14) argument_list -> . argument
+    (15) argument_list -> . argument COMA argument_list
+    (16) argument -> . ID
+    (17) argument -> . TEXT
+
+    ID              shift and go to state 29
+    TEXT            shift and go to state 32
+
+    argument                       shift and go to state 31
+    argument_list                  shift and go to state 40
+
+state 38
+
+    (11) crearboton -> ID ASIGNAR CREARBOTON LPARENT argument_list RPARENT .
+
+    FINL            reduce using rule 11 (crearboton -> ID ASIGNAR CREARBOTON LPARENT argument_list RPARENT .)
+
+
+state 39
+
+    (12) crearetiqueta -> ID ASIGNAR CREARETIQUETA LPARENT argument_list RPARENT .
+
+    FINL            reduce using rule 12 (crearetiqueta -> ID ASIGNAR CREARETIQUETA LPARENT argument_list RPARENT .)
+
+
+state 40
+
+    (15) argument_list -> argument COMA argument_list .
+
+    RPARENT         reduce using rule 15 (argument_list -> argument COMA argument_list .)
+
